@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Preetham Reddy Challa | Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="index.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="#" onclick="showSection('about')" data-tooltip="About"
+          ><i class="fas fa-user"></i
+        ></a>
+        <a href="#" onclick="showSection('skills')" data-tooltip="Skills"
+          ><i class="fas fa-cogs"></i
+        ></a>
+        <a
+          href="#"
+          onclick="showSection('experience')"
+          data-tooltip="Experience"
+          ><i class="fas fa-briefcase"></i
+        ></a>
+
+        <a href="#" onclick="showSection('education')" data-tooltip="Education">
+          <i class="fas fa-graduation-cap"></i>
+        </a>
+        <a href="#" onclick="showSection('projects')" data-tooltip="Projects"
+          ><i class="fas fa-flask"></i
+        ></a>
+        <a href="#" onclick="showSection('contact')" data-tooltip="Contact"
+          ><i class="fas fa-envelope"></i
+        ></a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="overlay"></div>
+      <div class="hero-content">
+        <img src="Profile_pic.JPG" alt="Profile Picture" />
+        <h1>Preetham Reddy Challa</h1>
+        <p>
+          AWS Certified Data Engineer | Data Analyst | SQL | Python | Spark |
+          Azure | Kafka | Snowflake | Tableau | Master’s in CS @ UCM
+        </p>
+        <div class="buttons">
+          <a
+            href="https://www.linkedin.com/in/preethamreddychalla"
+            class="icon-btn linkedin"
+            target="_blank"
+            aria-label="LinkedIn"
+          ></a>
+          <a
+            href="https://github.com/preethamreddy1503"
+            class="icon-btn github"
+            target="_blank"
+            aria-label="GitHub"
+          ></a>
+          <a
+            href="mailto:Preethamreddy1503@gmail.com"
+            class="icon-btn email"
+            aria-label="Email"
+          ></a>
+        </div>
+      </div>
+    </section>
+
+    <button onclick="openResumeModal()" class="floating-btn">
+      <i class="fas fa-file-alt"></i> Resume
+    </button>
+    <div
+      id="resumeModal"
+      style="
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.85);
+        z-index: 1000;
+        justify-content: center;
+        align-items: center;
+      "
+    >
+      <div
+        style="
+          background: white;
+          width: 80%;
+          height: 80%;
+          border-radius: 10px;
+          position: relative;
+          overflow: hidden;
+          display: flex;
+          flex-direction: column;
+        "
+      >
+        <button
+          onclick="closeResumeModal()"
+          style="
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+          "
+        >
+          &times;
+        </button>
+        <iframe
+          src="Preetham_Resume_DE.pdf"
+          title="Resume Preview"
+          style="flex: 1; width: 100%; height: 100%; border: none"
+        ></iframe>
+
+        <div style="padding: 10px; text-align: right">
+          <a
+            href="Preetham_Resume_DE.pdf"
+            download
+            style="
+              margin-right: 10px;
+              padding: 8px 12px;
+              background: #007bff;
+              color: white;
+              border-radius: 5px;
+              text-decoration: none;
+            "
+            >Download PDF</a
+          >
+          <a
+            href="Preetham_Resume_DE.docx"
+            download
+            style="
+              padding: 8px 12px;
+              background: #28a745;
+              color: white;
+              border-radius: 5px;
+              text-decoration: none;
+            "
+            >Download DOCX</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div id="about" class="section">
+      <h2>About Me</h2>
+      <p>
+        I’m a passionate and results-driven Data Engineer with over 3 years of
+        experience in building scalable data pipelines, architecting cloud-based
+        data solutions, and enabling real-time analytics. I specialize in
+        transforming complex data into valuable insights using modern
+        technologies like Python, SQL, Spark, Kafka, and Snowflake.
+      </p>
+      <p>
+        My work spans across industries, including healthcare and enterprise
+        software, where I’ve successfully implemented ETL/ELT pipelines,
+        optimized data warehousing systems, and delivered actionable BI
+        dashboards. I take pride in delivering clean, reliable, and performant
+        data systems that power smarter decisions.
+      </p>
+      <p>
+        As an AWS Certified Data Engineer with hands-on experience in cloud
+        platforms like AWS, Azure, and GCP, I bring a unique blend of technical
+        expertise and business understanding to every project I work on.
+        completing my Master’s in Computer Science at the University of Central
+        Missouri and always exploring new challenges that push the boundaries of
+        data engineering.
+      </p>
+    </div>
+
+    <div id="skills" class="section">
+      <h2>Skills</h2>
+      <ul>
+        <li>Languages: Python, Java, SQL</li>
+        <li>Cloud: AWS, Azure, GCP</li>
+        <li>Big Data: Spark, Hadoop, Kafka</li>
+        <li>Tools: Docker, Git, Tableau, Snowflake</li>
+      </ul>
+    </div>
+    <div id="education" class="section">
+      <h2>Education</h2>
+
+      <h3>🎓 Master of Science – Computer Science</h3>
+      <p>
+        <strong>University of Central Missouri</strong> — Jan 2023 to May 2024
+      </p>
+      <ul>
+        <li>CGPA: 3.1 / 4.0</li>
+        <li>
+          Courses: Advanced Algorithms, Advanced Database Systems, Programming
+          Foundations for Data Science & AI
+        </li>
+      </ul>
+
+      <h3>
+        🎓 Bachelor of Technology – Electronics & Communication Engineering
+      </h3>
+      <p>
+        <strong>Kakatiya Institute of Technology and Science</strong> —
+        Graduated May 2022
+      </p>
+      <ul>
+        <li>CGPA: 8.8 / 10</li>
+        <li>
+          Courses: Programming in C, Object-Oriented Programming in Java,
+          Python, Advanced Algorithms
+        </li>
+      </ul>
+    </div>
+    <div id="experience" class="section">
+      <h2>Experience</h2>
+      <ul>
+        <li>
+          <strong>United Health Care</strong> – Associate Data Engineer (May
+          2024–Present)
+        </li>
+        <li>
+          <strong>Infor, Hyderabad</strong> – Associate Data Engineer (May
+          2021–Dec 2022)
+        </li>
+        <li>
+          <strong>Infor</strong> – Internship: Associate Consultant (Jan
+          2021–May 2021)
+        </li>
+      </ul>
+      <p>
+        My journey as a Data Engineer began at <strong>Infor</strong> in
+        Hyderabad, where I joined as a full-time engineer after an exciting
+        internship. There, I learned the value of clean data and how it fuels
+        smart business decisions. I built and maintained ETL pipelines, created
+        dashboards in Looker and Tableau, and helped migrate massive datasets to
+        Snowflake and GCP — laying the foundation for scalable cloud-native data
+        solutions.
+      </p>
+      <p>
+        During this time, I collaborated closely with cross-functional teams and
+        realized how crucial seamless data integration and visualization are in
+        solving real-world challenges. My ability to translate business
+        requirements into reliable, high-performing pipelines quickly became one
+        of my biggest strengths.
+      </p>
+      <p>
+        Today, I work with <strong>United Health Care</strong> as an Associate
+        Data Engineer, where I contribute to one of the most critical sectors —
+        healthcare. My work involves designing data warehouses to support
+        analytical needs, ensuring compliance with HIPAA regulations, and
+        optimizing data pipelines to deliver clean, trusted insights to various
+        teams. Whether it's integrating Kafka-based real-time data, leveraging
+        Snowflake for secure storage, or supporting BI teams with Tableau-ready
+        datasets, my goal remains the same: to deliver accurate, performant, and
+        valuable data — at scale.
+      </p>
+      <p>
+        These experiences have not only sharpened my technical skills but also
+        taught me how data, when harnessed right, can drive meaningful change
+        across industries. My passion for building intelligent, cloud-ready data
+        systems continues to grow as I take on new challenges and opportunities.
+      </p>
+    </div>
+
+    <div id="projects" class="section">
+      <h2>Projects</h2>
+
+      <h3>📊 Poll Application (Django)</h3>
+      <ul>
+        <li>
+          Developed a full-stack polling web application using Django framework,
+          complete with user-facing and admin interfaces.
+        </li>
+        <li>
+          Implemented authentication-protected admin dashboard to create, edit,
+          and manage polls in real-time.
+        </li>
+        <li>
+          Designed intuitive UI for users to vote and view live poll results,
+          ensuring a seamless and interactive experience.
+        </li>
+        <li>
+          Utilized Django ORM for database interaction and managed deployment
+          using local servers during testing phase.
+        </li>
+        <li>
+          <strong>Tech Stack:</strong> Django, HTML/CSS, SQLite, Python, Visual
+          Studio Code
+        </li>
+      </ul>
+
+      <h3>🩺 Disease Prediction System Using Machine Learning</h3>
+      <ul>
+        <li>
+          Designed and developed a predictive model using Decision Tree
+          algorithm to identify potential diseases based on user input.
+        </li>
+        <li>
+          Built a user-facing interface to capture symptoms and return both
+          primary and alternative disease possibilities based on training data.
+        </li>
+        <li>
+          Enhanced accuracy by applying data preprocessing and validation
+          strategies on medical symptom datasets.
+        </li>
+        <li>
+          Included a probability-based fallback to suggest related diseases even
+          when symptom combinations were not exact.
+        </li>
+        <li>
+          <strong>Tech Stack:</strong> Python, scikit-learn, Pandas, Jupyter
+          Notebook, GitHub
+        </li>
+      </ul>
+
+      <h3>☁️ Data Migration & Dashboarding (Professional)</h3>
+      <ul>
+        <li>
+          Contributed to enterprise-level project to migrate legacy data
+          warehouses to Snowflake and GCP using scalable ETL pipelines.
+        </li>
+        <li>
+          Collaborated with stakeholders to define data visualization
+          requirements and built dynamic dashboards using Looker and Tableau.
+        </li>
+        <li>
+          Optimized SQL queries for performance and implemented automated
+          reporting pipelines for real-time KPI tracking.
+        </li>
+        <li>
+          Ensured data quality and transformation accuracy through rigorous
+          validation and audit logs.
+        </li>
+        <li>
+          <strong>Tech Stack:</strong> Snowflake, GCP, BigQuery, SQL, Tableau,
+          Looker
+        </li>
+      </ul>
+
+      <h3>📦 ERP Customization & Reporting Templates (Internship)</h3>
+      <ul>
+        <li>
+          Customized ERP modules for sales and warehouse management during
+          internship at Infor, aligning with client-specific workflows.
+        </li>
+        <li>
+          Developed and automated billing, delivery, and inventory report
+          templates using Infor LN and 4GL scripting.
+        </li>
+        <li>
+          Collaborated with senior consultants and gained hands-on experience
+          working within enterprise-grade ERP systems.
+        </li>
+        <li><strong>Tech Stack:</strong> Infor LN, 4GL, ERP Tools, SQL</li>
+      </ul>
+    </div>
+
+    <div id="contact" class="section">
+      <h2>Contact</h2>
+      <p>Email: Preethamreddy1503@gmail.com</p>
+      <p>Phone: +1 (314) 669-1880</p>
+    </div>
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle Theme">
+      🌙
+    </button>
+    <script>
+      function showSection(id) {
+        document.querySelectorAll(".section").forEach((section) => {
+          section.style.display = "none";
+        });
+        document.getElementById(id).style.display = "block";
+
+        document.querySelectorAll("nav a").forEach((link) => {
+          link.classList.remove("active");
+        });
+        const clicked = [...document.querySelectorAll("nav a")].find((a) =>
+          a.getAttribute("onclick").includes(id)
+        );
+        if (clicked) clicked.classList.add("active");
+        document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+      }
+      const themeToggle = document.getElementById("themeToggle");
+      let darkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+      themeToggle.addEventListener("click", () => {
+        darkMode = !darkMode;
+        document.body.style.backgroundColor = darkMode ? "#1a1a1a" : "#f4f4f4";
+        document.body.style.color = darkMode ? "#f4f4f4" : "#000";
+      });
+      function openResumeModal() {
+        document.getElementById("resumeModal").style.display = "flex";
+      }
+      function closeResumeModal() {
+        document.getElementById("resumeModal").style.display = "none";
+      }
+
+      const toggleBtn = document.getElementById("themeToggle");
+
+      // Set initial theme based on user preference or default
+      const prefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+      ).matches;
+      const storedTheme = localStorage.getItem("theme");
+      if (storedTheme === "dark" || (!storedTheme && prefersDark)) {
+        document.body.classList.add("dark");
+        toggleBtn.textContent = "☀️";
+      }
+
+      toggleBtn.addEventListener("click", () => {
+        document.body.classList.toggle("dark");
+        const isDark = document.body.classList.contains("dark");
+        toggleBtn.textContent = isDark ? "☀️" : "🌙";
+        localStorage.setItem("theme", isDark ? "dark" : "light");
+      });
+      // Optional: Show "About" on initial load
+      window.onload = () => showSection("about");
+    </script>
+  </body>
+</html>
